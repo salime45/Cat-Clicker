@@ -1,0 +1,24 @@
+<html>
+<header>
+  <title> Cat Clicker</title>
+  </header>
+<body>
+  <h1>
+     Cat Clicker
+  </h1>
+  <p id="msg">
+    Pulsado 0 veces
+  </p>
+<img id="cat-img" src="https://lh3.ggpht.com/nlI91wYNCrjjNy5f-S3CmVehIBM4cprx-JFWOztLk7vFlhYuFR6YnxcT446AvxYg4Ab7M1Fy0twaOCWYcUk=s0#w=640&h=426" title="gato"></img>
+  <script>
+    var count = 0;
+    var elem = document.getElementById('cat-img');
+    elem.addEventListener('click', function(){
+      count++;
+      document.getElementById("msg").innerHTML = " Pulsado "+count +" veces";
+       
+    }, false);
+    
+  </script>
+  </body>
+</html>
