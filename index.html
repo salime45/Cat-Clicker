@@ -2,23 +2,35 @@
 <header>
   <title> Cat Clicker</title>
   </header>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+  <script>
+   $(document).ready(function(){
+
+     $('.cat-img').click(function(){
+          var count = parseInt($(this).siblings('.cnt').text());
+       console.log("--->" + count)
+       count = count + 1;
+          $(this).siblings('.cnt').empty();
+          $(this).siblings('.cnt').append(count);
+       
+    });
+	 });
+    
+  </script>
 <body>
   <h1>
      Cat Clicker
   </h1>
-  <p id="msg">
-    Pulsado 0 veces
-  </p>
-<img id="cat-img" src="https://lh3.ggpht.com/nlI91wYNCrjjNy5f-S3CmVehIBM4cprx-JFWOztLk7vFlhYuFR6YnxcT446AvxYg4Ab7M1Fy0twaOCWYcUk=s0#w=640&h=426" title="gato"></img>
-  <script>
-    var count = 0;
-    var elem = document.getElementById('cat-img');
-    elem.addEventListener('click', function(){
-      count++;
-      document.getElementById("msg").innerHTML = " Pulsado "+count +" veces";
-       
-    }, false);
-    
-  </script>
+  
+  <div>
+    <p class="cnt">0</p>
+    <img class="cat-img" src="https://lh3.ggpht.com/nlI91wYNCrjjNy5f-S3CmVehIBM4cprx-JFWOztLk7vFlhYuFR6YnxcT446AvxYg4Ab7M1Fy0twaOCWYcUk=s0#w=640&h=426" title="gato"></img>
+  </div>
+  
+    <div>
+    <p class="cnt">0</p>
+    <img class="cat-img" src="https://lh3.ggpht.com/kixazxoJ2ufl3ACj2I85Xsy-Rfog97BM75ZiLaX02KgeYramAEqlEHqPC3rKqdQj4C1VFnXXryadFs1J9A=s0#w=640&h=496" title="gato"></img>
+  </div>
+  
   </body>
 </html>
